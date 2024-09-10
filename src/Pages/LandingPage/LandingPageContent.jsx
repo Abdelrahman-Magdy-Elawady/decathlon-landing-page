@@ -12,9 +12,9 @@ import arrow from "../../assets/imgs/gallery/arrow.svg";
 import boyImg from "../../assets/imgs/gallery/7.jpg";
 import girlImg from "../../assets/imgs/gallery/6.jpg";
 import pressPlayImg from "../../assets/imgs/pressPlay.png";
-import smilePink from "../../assets/imgs/smile-pink.SVG";
-import smileRed from "../../assets/imgs/smile-red.SVG";
-import smileBlue from "../../assets/imgs/smile-blue.SVG";
+import smilePink from "../../assets/imgs/smile-pink.svg";
+import smileRed from "../../assets/imgs/smile-red.svg";
+import smileBlue from "../../assets/imgs/smile-blue.svg";
 //----------------------------------------------------
 import TshirtNoir from "../../assets/imgs/gallery/products/img21.png";
 import TshirtNoirBg from "../../assets/imgs/gallery/products/img20.png";
