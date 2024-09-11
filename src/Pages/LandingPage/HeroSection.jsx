@@ -13,6 +13,7 @@ const HeroSection = () => {
   useGSAP(
     () => {
       document.body.classList.toggle("overflow-hidden");
+      // history.scrollRestoration = "manual";
       gsap.to(window, { scrollTo: 0 });
 
       gsap
@@ -71,7 +72,7 @@ const HeroSection = () => {
   //-----------------------------------------------
   return (
     <div className="w-full h-screen" ref={heroRef}>
-      <div className="flex justify-center items-center gap-2 sm:gap-12 w-3/4 sm:w-auto mx-auto pt-16 relative logo">
+      <div className="flex justify-center items-center gap-2 sm:gap-12 w-3/4 sm:w-auto mx-auto pt-16 relative logo z-10">
         {Object.values(heroContent.header).map((imgSrc, index) => {
           return (
             <div key={index}>
@@ -84,7 +85,7 @@ const HeroSection = () => {
         })}
       </div>
 
-      <RubberWord className="mt-8 relative w-11/12 sm:w-3/4 mx-auto h-auto flex justify-center items-center  overflow-visible cursor-grab rubber-word">
+      <RubberWord className="z-10 mt-8 relative w-11/12 sm:w-3/4 mx-auto h-auto flex justify-center items-center  overflow-visible cursor-grab rubber-word ">
         {heroContent.RubberWordPaths}
       </RubberWord>
 
@@ -95,34 +96,28 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="hidden md:block absolute top-10 left-10 w-32 xl:left-20 xl:w-40 sun">
+      <div className="hidden md:block absolute top-10 left-10 w-32 xl:left-20 xl:w-40 sun z-10">
         <img
           src={heroContent.animatedSun}
           className="w-full h-full object-cover"
         />
       </div>
 
-      <div className="absolute inset-0 flex flex-col justify-evenly overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 flex flex-col justify-evenly overflow-hidden  pointer-events-none items-start">
         {Array(4)
           .fill(0)
           .map((_, index) => (
             <motion.div
               key={index}
-              style={{ zIndex: `${index === 0 ? "-1" : ""}` }}
               initial={{
-                x: "-100%",
+                x: index % 2 === 0 ? "-100%" : "100vw",
               }}
               animate={{
-                x: "100%",
-                y: `${
-                  index % 2 === 0
-                    ? 25 + index * 25 + "%"
-                    : -(25 + index * 25) + "%"
-                }`,
+                x: index % 2 === 0 ? "100vw" : "-100%",
               }}
               transition={{
                 repeat: Infinity,
-                duration: `${15 + parseInt(Math.random() * 10)}`,
+                duration: `${25 + (index + 1) * 5}`,
               }}
             >
               <img src={heroContent.cloud} />

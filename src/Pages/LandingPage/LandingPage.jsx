@@ -8,6 +8,7 @@ import { useInnerWidth } from "../../CutomHooks/UseInnerWidth.jsx";
 import Divider from "../../Components/Divider.jsx";
 import ProductsSection from "./ProductsSection.jsx";
 import { products } from "./LandingPageContent.jsx";
+import YeyeWellesSection from "./YeyeWellesSection.jsx";
 
 export default function LandingPage() {
   const innerWidth = useInnerWidth();
@@ -47,33 +48,7 @@ export default function LandingPage() {
       <ProductsSection products={products[0]} className="my-10" />
       <Divider className="h-6  mx-4" />
       <ProductsSection products={products[1]} />
-      <InfinityScrollbar time={50} direction="rtl" className="mt-4">
-        <div
-          className="w-full flex justify-around items-center bg-[#a564a8] border-y-2 border-black py-2 text-nowrap gap-4  
-          "
-          style={{
-            fontSize: `calc(18px * (clamp(0,${innerWidth * 1.25},640) / 640))`,
-          }}
-        >
-          {infinityScroll.sentence.map((text, index) => (
-            <Fragment key={index}>
-              <div className="uppercase font-bold">{text}</div>
-              <motion.div
-                animate={{
-                  rotate: [180, -180],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-              >
-                <img src={infinityScroll.emoji[index]} loading="lazy" />
-              </motion.div>
-            </Fragment>
-          ))}
-        </div>
-      </InfinityScrollbar>
+      <YeyeWellesSection />
     </div>
   );
 }

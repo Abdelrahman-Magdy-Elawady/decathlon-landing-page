@@ -33,7 +33,7 @@ export default function InfinityScrollbar({
   return (
     <div className={`w-full overflow-hidden ${className}`}>
       <div
-        className="grid grid-cols-2 md:w-[250%] w-[400%]"
+        className="grid grid-cols-2 md:w-[250%] w-[400%] border-none"
         style={{
           transform: `translate(${translateX}%,0%)`,
         }}
