@@ -3,7 +3,7 @@ import { infinityScroll } from "./LandingPageContent";
 import { Fragment, useRef } from "react";
 import { motion } from "framer-motion";
 import Divider from "../../Components/Divider";
-import Button from "../../Components/Button";
+import ButtonWithPattern from "../../Components/ButtonWithPattern";
 import { videoPlayer } from "../../Helpers/videoPlayer";
 //------------------------------------------------
 import leftSpeaker from "../../assets/imgs/speaker.gif";
@@ -11,9 +11,6 @@ import rightSpeaker from "../../assets/imgs/speaker-reverse.gif";
 import yeyeLogo from "../../assets/imgs/hero/logo-yeye-weller.svg";
 import star from "../../assets/imgs/star-blue.png";
 import mixedEmoji from "../../assets/imgs/stickers-about.png";
-import smillyDuo from "../../assets/imgs/sticker-smiley-duo-2.png";
-import decathlon from "../../assets/imgs/hero/logo-decathlon.svg";
-import cross from "../../assets/imgs/hero/cross.svg";
 import play from "../../assets/imgs/hero/play.svg";
 import playBg from "../../assets/imgs/hero/play-background.svg";
 import mascot from "../../assets/imgs/mascot-video.gif";
@@ -59,12 +56,25 @@ const YeyeWellesSection = () => {
           scrub: 1,
         },
       });
-      gsap.from(".instagram-section", {
-        scale: 0.5,
-        ease: "bounce",
+
+      gsap.from(".instagram-content", {
+        xPercent: "100",
+        ease: "power3.inOut",
         scrollTrigger: {
-          trigger: ".instagram-section",
-          start: "top 75%",
+          trigger: ".instagram-content",
+          start: "top 80%",
+          end: "bottom bottom",
+          scrub: 1,
+        },
+      });
+      gsap.to(".slice", {
+        xPercent: "-100",
+        stagger: 0.1,
+        ease: "power3.in",
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".window",
+          start: "top 80%",
           end: "bottom bottom",
           scrub: 1,
         },
@@ -87,7 +97,7 @@ const YeyeWellesSection = () => {
 
   //----------------------------------------------------------
   return (
-    <div className=" bg-[#ff99c8] overflow-hidden " ref={yeyeRef}>
+    <div className=" bg-custom_pink overflow-hidden " ref={yeyeRef}>
       <InfinityScrollbar time={50} direction="rtl">
         <div
           className="w-full flex justify-around items-center bg-[#a564a8] border-y-2 border-black py-2 text-nowrap gap-4 font-extrabold 
@@ -148,26 +158,32 @@ const YeyeWellesSection = () => {
       </div>
       <Divider className="h-6 m-24 mx-4" />
 
-      <div className="flex flex-col text-center items-center gap-16 md:mx-16 mb-16 instagram-section">
-        <div className="order-2 md:order-1 md:w-1/3">
-          <img src={mixedEmoji} className="size-full" />
-        </div>
-        <div className="order-1 md:order-2 text-2xl md:text-3xl md:max-w-[55rem]">
-          Mis à l&apos;honneur pour cette collaboration estivale avec Decathlon,
-          Yeye Weller, un duo d&apos;illustrateurs allemands, propose un art
-          haut en couleurs avec humour.
-        </div>
-        <div className="relative order-3">
-          <Button className="mx-auto block relative w-52 h-14 bg-[#fcd8db] group hover:translate-y-2 duration-500  transition-all font-extrabold ">
+      <div className="relative instagram-section">
+        <div className="flex flex-col text-center items-center gap-16 md:px-16 pb-16 instagram-content">
+          <div className="order-2 md:order-1 md:w-1/3">
+            <img src={mixedEmoji} className="size-full" />
+          </div>
+          <div className="order-1 md:order-2 text-2xl md:text-3xl md:max-w-[55rem] p-4">
+            Mis à l&apos;honneur pour cette collaboration estivale avec
+            Decathlon, Yeye Weller, un duo d&apos;illustrateurs allemands,
+            propose un art haut en couleurs avec humour.
+          </div>
+          <ButtonWithPattern
+            config={{ pattern, patternBg: "#F03B42" }}
+            className="order-3"
+          >
             instagram
-            <div
-              className="h-4 rounded-md absolute top-full inset-x-2 border-black border-2  transition-all group-hover:h-0 group-hover:inset-x-0 group-hover:border-0 duration-500 "
-              style={{
-                backgroundImage: `url(${pattern})`,
-                backgroundColor: "#F03B42",
-              }}
-            ></div>
-          </Button>
+          </ButtonWithPattern>
+        </div>
+        <div className="absolute inset-0  z-10 grid window overflow-hidden">
+          {Array(5)
+            .fill(0)
+            .map((_, index) => (
+              <div
+                key={index}
+                className="slice bg-custom_pink shadow-black shadow-2xl"
+              ></div>
+            ))}
         </div>
       </div>
       <InfinityScrollbar time={50} direction="rtl">
@@ -208,10 +224,10 @@ const YeyeWellesSection = () => {
           onClick={() => playVideo()}
         >
           <iframe
-            className="size-full object-cover object-center pointer-events-auto"
+            className="size-full object-cover object-center pointer-events-auto "
             src="https://www.youtube.com/embed/ob2DpxTpEyg?si=-ymAkCMb7b5n3O7X"
             title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
             ref={videoRef}
