@@ -119,11 +119,7 @@ const YeyeWellesSection = () => {
                   repeatType: "reverse",
                 }}
               >
-                <img
-                  loading="lazy"
-                  src={infinityScroll.emoji[index]}
-                  loading="lazy"
-                />
+                <img loading="lazy" src={infinityScroll.emoji[index]} />
               </motion.div>
             </Fragment>
           ))}
@@ -218,11 +214,7 @@ const YeyeWellesSection = () => {
                   repeatType: "reverse",
                 }}
               >
-                <img
-                  loading="lazy"
-                  src={infinityScroll.emoji[index]}
-                  loading="lazy"
-                />
+                <img loading="lazy" src={infinityScroll.emoji[index]} />
               </motion.div>
             </Fragment>
           ))}
