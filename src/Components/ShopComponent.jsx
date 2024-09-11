@@ -53,6 +53,7 @@ const Shop = ({ className }) => {
         end: "bottom bottom",
         scrub: 3,
         pin: true,
+        markers: true,
         onEnterBack: () => {
           tl.current.pause();
           setOutOfScroll(false);
