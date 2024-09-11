@@ -52,7 +52,6 @@ const Shop = ({ className }) => {
         end: "bottom bottom",
         scrub: 3,
         pin: true,
-
         onEnterBack: () => {
           tl.current.pause();
           setOutOfScroll(false);
@@ -73,7 +72,7 @@ const Shop = ({ className }) => {
       ref={shopRef}
     >
       <div className="h-20"></div>
-      <div className="flex gap-4 md:gap-0 parent">
+      <div className="flex gap-4 md:gap-0 parent h-[8.5rem] md:h-[11.5rem]">
         <div className=" relative -rotate-12">
           <div className="w-20 md:w-28 border-2 border-white boy">
             <img loading="lazy" src={heroContent.shop.boyImg} />
