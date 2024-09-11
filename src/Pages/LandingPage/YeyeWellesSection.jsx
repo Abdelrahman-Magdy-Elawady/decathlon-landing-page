@@ -45,6 +45,7 @@ const YeyeWellesSection = () => {
           start: "top center",
           end: "bottom bottom",
           scrub: 1,
+          markers: true,
         },
       });
       gsap.from(".video", {
