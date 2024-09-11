@@ -29,6 +29,7 @@ const YeyeWellesSection = () => {
   const videoRef = useRef(null);
   const { contextSafe } = useGSAP(
     () => {
+      ScrollTrigger.normalizeScroll(true);
       gsap.from(".yeye-logo", {
         scale: 0.5,
         scrollTrigger: {
