@@ -48,7 +48,7 @@ const Shop = ({ className }) => {
       ScrollTrigger.create({
         animation: tl.current,
         trigger: ".parent",
-        start: "top center",
+        start: "top-=100 center",
         end: "bottom bottom",
         scrub: 3,
         pin: true,
