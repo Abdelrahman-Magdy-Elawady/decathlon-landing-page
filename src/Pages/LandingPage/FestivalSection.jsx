@@ -28,11 +28,19 @@ export default function FestivalSection() {
       <span className="scale-y-[5] scale-x-[1.25]">festival</span>
 
       <div className="w-full md:order-4">
-        <img src={animatedSun} className="object-cover object-center" />
+        <img
+          loading="lazy"
+          src={animatedSun}
+          className="object-cover object-center"
+        />
       </div>
       <PatternBlock className="md:md:order-2" />
       <div className="w-full md:order-8">
-        <img src={animatedCubeMan} className="object-cover object-center" />
+        <img
+          loading="lazy"
+          src={animatedCubeMan}
+          className="object-cover object-center"
+        />
       </div>
       <span className="md:order-3 scale-y-[5] scale-x-[1.25]">starter</span>
       <span className="md:order-5 scale-y-[5] scale-x-[1.25]">pack</span>

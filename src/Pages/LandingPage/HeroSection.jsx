@@ -77,6 +77,7 @@ const HeroSection = () => {
           return (
             <div key={index}>
               <img
+                loading="lazy"
                 src={imgSrc}
                 className="w-full h-full object-cover object-center "
               />
@@ -91,6 +92,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 mx-auto w-3/4 sm:w-1/2 -mt-4 xl:w-1/3  md:-mt-8 xl:-mt-10 circle-man">
         <img
+          loading="lazy"
           src={heroContent.circleMan}
           className="w-full h-full object-cover"
         />
@@ -98,6 +100,7 @@ const HeroSection = () => {
 
       <div className="hidden md:block absolute top-10 left-10 w-32 xl:left-20 xl:w-40 sun z-10">
         <img
+          loading="lazy"
           src={heroContent.animatedSun}
           className="w-full h-full object-cover"
         />
@@ -121,7 +124,7 @@ const HeroSection = () => {
               }}
               className="md:w-auto w-1/4"
             >
-              <img src={heroContent.cloud} />
+              <img loading="lazy" src={heroContent.cloud} />
             </motion.div>
           ))}
       </div>

@@ -6,6 +6,8 @@ export default function Product({ product }) {
       {product?.emoji && (
         <div className={`${product.styles.emoji}`}>
           <img
+            loading="lazy"
+            loading="lazy"
             src={product.emoji}
             className="w-full h-full object-cover object-center"
           />
@@ -22,6 +24,8 @@ export default function Product({ product }) {
           className={`${product.styles.mainImgBg} transition-all duration-300  ease-in-out  group-hover:opacity-0 absolute `}
         >
           <img
+            loading="lazy"
+            loading="lazy"
             src={product.mainImgBg}
             className="object-center object-cover "
           />
@@ -31,6 +35,8 @@ export default function Product({ product }) {
           className={`${product.styles.mainImg}  group-hover:scale-90 transition-all duration-300 ease-in-out`}
         >
           <img
+            loading="lazy"
+            loading="lazy"
             src={product.mainImg}
             className="object-center object-scale-down w-full h-full"
           />
@@ -43,7 +49,12 @@ export default function Product({ product }) {
               : "bottom-0 right-1/4 group-hover:right-0  group-hover:rotate-12 origin-bottom-right"
           } absolute  w-48  opacity-0 group-hover:opacity-100 transition-all duration-300  ease-in-out`}
         >
-          <img src={product.cardImg} className="object-center object-cover" />
+          <img
+            loading="lazy"
+            loading="lazy"
+            src={product.cardImg}
+            className="object-center object-cover"
+          />
         </div>
       </div>
 

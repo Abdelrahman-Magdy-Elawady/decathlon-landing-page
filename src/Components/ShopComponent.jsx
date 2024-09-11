@@ -48,11 +48,11 @@ const Shop = ({ className }) => {
       ScrollTrigger.create({
         animation: tl.current,
         trigger: ".parent",
-        start: "top-=100 center",
+        start: "top center",
         end: "bottom bottom",
         scrub: 3,
         pin: true,
-        markers: true,
+
         onEnterBack: () => {
           tl.current.pause();
           setOutOfScroll(false);
@@ -73,27 +73,27 @@ const Shop = ({ className }) => {
       ref={shopRef}
     >
       <div className="h-20"></div>
-      <div className="flex gap-4 md:gap-0 parent">
+      <div className="flex gap-4 md:gap-0 parent h-44">
         <div className=" relative -rotate-12">
           <div className="w-20 md:w-28 border-2 border-white boy">
-            <img src={heroContent.shop.boyImg} />
+            <img loading="lazy" src={heroContent.shop.boyImg} />
           </div>
 
           <div className="absolute top-0 w-8 right-0 translate-x-1/4  rotate-[35deg] -translate-y-1/2 md:translate-y-0 md:bottom-0 md:top-auto  md:w-10 md:translate-x-3/4 pink-smile">
-            <img src={heroContent.shop.pinkSmile} />
+            <img loading="lazy" src={heroContent.shop.pinkSmile} />
           </div>
 
           <div className="w-16 rotate-[35deg] absolute bottom-0 right-0 translate-x-1/2 translate-y-1/4 md:w-20 md:bottom-full md:translate-y-0 smile-face">
-            <img src={heroContent.shop.smileFace} />
+            <img loading="lazy" src={heroContent.shop.smileFace} />
           </div>
 
           <div className="hidden md:block w-20 -rotate-12 absolute bottom-0 right-0  -translate-y-1/4 press-play">
-            <img src={heroContent.shop.pressPlayImg} />
+            <img loading="lazy" src={heroContent.shop.pressPlayImg} />
           </div>
         </div>
 
         <div className="w-20 md:w-28 border-2 border-white rotate-12 mt-4 -z-10  girl">
-          <img src={heroContent.shop.girlImg} />
+          <img loading="lazy" src={heroContent.shop.girlImg} />
         </div>
       </div>
 
@@ -121,7 +121,7 @@ const Shop = ({ className }) => {
             }}
           ></div>
           <div className="absolute top-0 -translate-y-full left-0 -translate-x-full p-1 arrow">
-            <img src={heroContent.shop.arrow} />
+            <img loading="lazy" src={heroContent.shop.arrow} />
           </div>
         </Button>
       </div>

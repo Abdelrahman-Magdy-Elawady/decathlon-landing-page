@@ -45,7 +45,6 @@ const YeyeWellesSection = () => {
           start: "top center",
           end: "bottom bottom",
           scrub: 1,
-          markers: true,
         },
       });
       gsap.from(".video", {
@@ -120,7 +119,11 @@ const YeyeWellesSection = () => {
                   repeatType: "reverse",
                 }}
               >
-                <img src={infinityScroll.emoji[index]} loading="lazy" />
+                <img
+                  loading="lazy"
+                  src={infinityScroll.emoji[index]}
+                  loading="lazy"
+                />
               </motion.div>
             </Fragment>
           ))}
@@ -131,18 +134,21 @@ const YeyeWellesSection = () => {
         <div className="flex justify-center items-center md:gap-16 gap-2 h-40">
           <div className="md:w-60 w-1/3">
             <img
+              loading="lazy"
               src={leftSpeaker}
               className="size-full object-cover object-center"
             />
           </div>
           <div className="md:w-52 w-1/4 yeye-logo">
             <img
+              loading="lazy"
               src={yeyeLogo}
               className="size-full object-cover object-center"
             />
           </div>
           <div className="md:w-60 w-1/3">
             <img
+              loading="lazy"
               src={rightSpeaker}
               className="size-full object-cover object-center"
             />
@@ -150,10 +156,14 @@ const YeyeWellesSection = () => {
         </div>
         <div className="relative md:w-2/3  w-full rotate-6 main-img">
           <div>
-            <img src={mainImg} className="size-full " />
+            <img loading="lazy" src={mainImg} className="size-full " />
           </div>
           <div className="absolute bottom-0 right-1/4 translate-y-1/2 -rotate-45  w-12 ">
-            <img src={star} className="size-full object-cover object-center " />
+            <img
+              loading="lazy"
+              src={star}
+              className="size-full object-cover object-center "
+            />
           </div>
         </div>
       </div>
@@ -162,7 +172,7 @@ const YeyeWellesSection = () => {
       <div className="relative instagram-section">
         <div className="flex flex-col text-center items-center gap-16 md:px-16 pb-16 instagram-content">
           <div className="order-2 md:order-1 md:w-1/3">
-            <img src={mixedEmoji} className="size-full" />
+            <img loading="lazy" src={mixedEmoji} className="size-full" />
           </div>
           <div className="order-1 md:order-2 text-2xl md:text-3xl md:max-w-[55rem] p-4">
             Mis à l&apos;honneur pour cette collaboration estivale avec
@@ -208,7 +218,11 @@ const YeyeWellesSection = () => {
                   repeatType: "reverse",
                 }}
               >
-                <img src={infinityScroll.emoji[index]} loading="lazy" />
+                <img
+                  loading="lazy"
+                  src={infinityScroll.emoji[index]}
+                  loading="lazy"
+                />
               </motion.div>
             </Fragment>
           ))}
@@ -236,6 +250,7 @@ const YeyeWellesSection = () => {
 
           <div className="absolute inset-0 border-black rounded-xl overflow-hidden">
             <img
+              loading="lazy"
               src={videoPoster}
               className="size-full object-cover object-center group-hover/videoBg:scale-105 transition-transform duration-300 videoPoster"
             />
@@ -252,6 +267,7 @@ const YeyeWellesSection = () => {
           >
             <div className="w-5 md:w-auto">
               <img
+                loading="lazy"
                 src={play}
                 className="size-full object-cover object-center"
               />
@@ -259,7 +275,7 @@ const YeyeWellesSection = () => {
           </div>
         </div>
         <div className="w-32 md:w-auto absolute bottom-0 left-0 mascot">
-          <img src={mascot} className="size-full " />
+          <img loading="lazy" src={mascot} className="size-full " />
         </div>
       </div>
     </div>

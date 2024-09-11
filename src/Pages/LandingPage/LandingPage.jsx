@@ -37,7 +37,12 @@ export default function LandingPage() {
                   repeatType: "reverse",
                 }}
               >
-                <img src={infinityScroll.emoji[index]} loading="lazy" />
+                <img
+                  loading="lazy"
+                  loading="lazy"
+                  src={infinityScroll.emoji[index]}
+                  loading="lazy"
+                />
               </motion.div>
             </Fragment>
           ))}
