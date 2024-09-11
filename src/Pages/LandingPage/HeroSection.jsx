@@ -119,6 +119,7 @@ const HeroSection = () => {
                 repeat: Infinity,
                 duration: `${25 + (index + 1) * 5}`,
               }}
+              className="md:w-auto w-1/4"
             >
               <img src={heroContent.cloud} />
             </motion.div>

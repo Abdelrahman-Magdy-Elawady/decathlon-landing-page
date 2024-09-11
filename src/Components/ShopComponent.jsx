@@ -13,6 +13,7 @@ const Shop = ({ className }) => {
 
   useGSAP(
     () => {
+      ScrollTrigger.normalizeScroll(true);
       tl.current = gsap.timeline({
         defaults: {
           ease: "power3.inOut",

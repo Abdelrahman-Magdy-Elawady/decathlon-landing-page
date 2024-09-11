@@ -175,7 +175,7 @@ const YeyeWellesSection = () => {
             instagram
           </ButtonWithPattern>
         </div>
-        <div className="absolute inset-0  z-10 grid window overflow-hidden">
+        <div className="absolute inset-0  z-10 grid window overflow-hidden pointer-events-none">
           {Array(5)
             .fill(0)
             .map((_, index) => (
