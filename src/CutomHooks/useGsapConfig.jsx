@@ -5,8 +5,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function useGsapConfig() {
   useEffect(() => {
-    if (ScrollTrigger.isTouch === 1) {
-      ScrollTrigger.normalizeScroll(true);
-    }
+    ScrollTrigger.config({
+      ignoreMobileResize: true,
+    });
   }, []);
 }
