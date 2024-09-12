@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
 import { heroContent } from "./LandingPageContent";
 import RubberWord from "../../Components/RubberWord";
 import ShopComponent from "../../Components/ShopComponent.jsx";
+import Clouds from "../../Components/Clouds.jsx";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
@@ -86,7 +86,14 @@ const HeroSection = () => {
         })}
       </div>
 
-      <RubberWord className="z-10 mt-8 relative w-11/12 sm:w-3/4 mx-auto h-auto flex justify-center items-center  overflow-visible cursor-grab rubber-word ">
+      <RubberWord
+        className="z-10 mt-8 relative w-11/12 sm:w-3/4 mx-auto h-auto flex justify-center items-center  overflow-visible cursor-grab rubber-word "
+        config={{
+          width: "960",
+          height: "169",
+          viewBox: "0 0 960 169",
+        }}
+      >
         {heroContent.RubberWordPaths}
       </RubberWord>
 
@@ -105,29 +112,7 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
         />
       </div>
-
-      <div className="absolute inset-0 flex flex-col justify-evenly overflow-hidden  pointer-events-none items-start">
-        {Array(4)
-          .fill(0)
-          .map((_, index) => (
-            <motion.div
-              key={index}
-              initial={{
-                x: index % 2 === 0 ? "-100%" : "100vw",
-              }}
-              animate={{
-                x: index % 2 === 0 ? "100vw" : "-100%",
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: `${25 + (index + 1) * 5}`,
-              }}
-              className="md:w-auto w-1/4"
-            >
-              <img loading="lazy" src={heroContent.cloud} />
-            </motion.div>
-          ))}
-      </div>
+      <Clouds />
       <ShopComponent className="shop" />
     </div>
   );

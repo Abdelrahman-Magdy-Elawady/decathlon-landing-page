@@ -8,7 +8,6 @@ const RubberChar = ({ d }) => {
   const [isUp, setIsUp] = useState(true);
 
   const bouncingEffect = () => {
-    console.log("start");
     controls.start({
       transform: isUp
         ? ["matrix(1,0,0,1.3,0,-75)", "matrix(1,0,0,1,0,0)"]
@@ -36,6 +35,9 @@ const RubberChar = ({ d }) => {
         setIsUp(!isUp);
       }}
       className="rubber-char"
+      style={{
+        fill: "currentColor",
+      }}
     ></motion.path>
   );
 };

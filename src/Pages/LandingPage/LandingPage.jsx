@@ -1,7 +1,7 @@
 import HeroSection from "./HeroSection";
 import InfinityScrollbar from "../../Components/InfinityScrollbar";
 import { infinityScroll } from "./LandingPageContent.jsx";
-import { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 import { motion } from "framer-motion";
 import FestivalSection from "./FestivalSection.jsx";
 import { useInnerWidth } from "../../CutomHooks/UseInnerWidth.jsx";
@@ -9,20 +9,14 @@ import Divider from "../../Components/Divider.jsx";
 import ProductsSection from "./ProductsSection.jsx";
 import { products } from "./LandingPageContent.jsx";
 import YeyeWellesSection from "./YeyeWellesSection.jsx";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/src/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+
+import LaColiarSection from "./LaColiarSection.jsx";
+
 export default function LandingPage() {
   const innerWidth = useInnerWidth();
-  useEffect(() => {
-    const resizeHandler = () => {
-      ScrollTrigger.refresh();
-    };
-    window.addEventListener("resize", resizeHandler);
-    return () => window.addEventListener("resize", resizeHandler);
-  }, []);
+
   return (
-    <div className="bg-bgColor">
+    <div className="bg-bgColor overflow-x-hidden">
       <HeroSection />
       <InfinityScrollbar time={50} direction="rtl" className="rotate-1 mt-4">
         <div
@@ -46,12 +40,7 @@ export default function LandingPage() {
                   repeatType: "reverse",
                 }}
               >
-                <img
-                  loading="lazy"
-                  loading="lazy"
-                  src={infinityScroll.emoji[index]}
-                  loading="lazy"
-                />
+                <img loading="lazy" src={infinityScroll.emoji[index]} />
               </motion.div>
             </Fragment>
           ))}
@@ -63,6 +52,7 @@ export default function LandingPage() {
       <Divider className="h-6  mx-4" />
       <ProductsSection products={products[1]} />
       <YeyeWellesSection />
+      <LaColiarSection />
     </div>
   );
 }
