@@ -1,12 +1,14 @@
-import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
+import { useEffect } from "react";
 
-export default function useGsapConfig() {
+export function useGsapConfig() {
   useEffect(() => {
-    ScrollTrigger.config({
-      ignoreMobileResize: true,
-    });
+    const resizeHandler = () => {
+      ScrollTrigger.refresh();
+    };
+    window.addEventListener("resize", resizeHandler);
+    return () => window.addEventListener("resize", resizeHandler);
   }, []);
 }
