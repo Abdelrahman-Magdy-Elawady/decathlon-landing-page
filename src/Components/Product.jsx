@@ -2,7 +2,7 @@ import Button from "./Button";
 import { GoDotFill } from "react-icons/go";
 export default function Product({ product }) {
   return (
-    <div className="hover:cursor-pointer flex flex-col items-center justify-center py-8 group gap-12">
+    <div className=" hover:cursor-pointer flex flex-col items-center justify-center py-8 group gap-12">
       {product?.emoji && (
         <div className={`${product.styles.emoji}`}>
           <img
@@ -54,11 +54,11 @@ export default function Product({ product }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-4 px-4">
-        <div className="font-extrabold text-2xl uppercase text-center flex items-center justify-center ">
-          {product.name}
+      <div className="flex flex-col items-center justify-center gap-4 px-8">
+        <div className="font-extrabold text-2xl uppercase text-center flex items-center justify-center">
+          <span> {product.name}</span>
           <GoDotFill className="flex-shrink-0" />
-          {product.cost}&#8364;
+          <span>{product.cost}&#8364;</span>
         </div>
 
         <Button

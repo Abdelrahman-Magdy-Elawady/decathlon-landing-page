@@ -96,33 +96,35 @@ export default function LaColiarSection() {
           scrub: 2,
         },
       });
-      gsap.to(".img-5", {
-        y: "-75%",
+
+      gsap.from(".img-5", {
+        y: "100%",
         scrollTrigger: {
           trigger: ".sec-3",
-          start: "top 75%",
-          end: "bottom bottom",
+          start: "top bottom",
+          end: "bottom top",
           scrub: 1,
         },
       });
-      gsap.to(".img-6", {
-        y: "-75%",
+      gsap.from(".img-6", {
+        y: "50%",
         scrollTrigger: {
           trigger: ".sec-3",
-          start: "top 75%",
-          end: "bottom bottom",
-          scrub: 2,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
         },
       });
-      gsap.to(".img-7", {
-        y: "-75%",
+      gsap.from(".img-7", {
+        y: "70%",
         scrollTrigger: {
           trigger: ".sec-3",
-          start: "top 75%",
-          end: "bottom bottom",
-          scrub: 2,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
         },
       });
+
       gsap.to(".img-8", {
         y: "-75%",
         scrollTrigger: {
@@ -281,10 +283,10 @@ export default function LaColiarSection() {
           <div className="w-40 md:w-64 rotate-12  img-5 md:translate-x-full">
             <img src={img5} className="size-full object-cover object-center" />
           </div>
-          <div className="w-44 md:w-96  img-6  -rotate-6 -translate-x-1/2">
+          <div className="w-44 md:w-96  img-6  -rotate-6 -translate-x-1/2 -translate-y-1/4">
             <img src={img6} className="size-full object-cover object-center" />
           </div>
-          <div className="w-48 md:w-[30rem] rotate-6  img-7 translate-x-1/4 -translate-y-1/3 flex-1">
+          <div className="w-48 md:w-[30rem] rotate-6  img-7 translate-x-1/4 -translate-y-3/4 flex-1">
             <img src={img7} className="size-full object-cover object-center" />
           </div>
         </div>
