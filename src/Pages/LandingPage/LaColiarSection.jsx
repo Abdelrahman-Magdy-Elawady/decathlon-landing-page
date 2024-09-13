@@ -226,7 +226,7 @@ export default function LaColiarSection() {
       </div>
 
       <div>
-        <div className="flex justify-center items-center gap-24 sec-1 relative">
+        <div className="mx-4 flex justify-center items-center gap-24 sec-1 relative">
           <div className="w-[30rem] -rotate-6 img-1">
             <img src={img1} className="size-full object-cover object-center" />
           </div>
@@ -251,7 +251,7 @@ export default function LaColiarSection() {
 
         <div className="px-16 sm:pt-96 pt-44  sec-2 relative flex">
           <Clouds count={2} />
-          <div className="w-[40rem] -rotate-1 img-3 relative">
+          <div className="w-[40rem] -rotate-1 img-3 relative ">
             <img src={img4} className="size-full object-cover object-center" />
             <div className="lg:w-64 rotate-6  img-4 absolute lg:left-full bottom-full translate-y-1/4 lg:-translate-x-1/4 left-1/2 -translate-x-1/2 w-auto">
               <img
@@ -277,21 +277,21 @@ export default function LaColiarSection() {
           </div>
         </div>
 
-        <div className=" sec-3 relative flex flex-col gap-24 items-center justify-items-center">
+        <div className="sec-3 relative flex flex-col gap-24 items-center justify-items-center">
           <Clouds count={4} />
-          <div className="w-40 md:w-64 rotate-12  img-5 md:translate-x-full">
+          <div className="w-40 md:w-64 rotate-12  img-5 md:translate-x-1/2 lg:translate-x-full">
             <img src={img5} className="size-full object-cover object-center" />
           </div>
-          <div className="w-44 md:w-96  img-6  -rotate-6 -translate-x-1/2 -translate-y-1/4">
+          <div className=" w-44 md:w-96  img-6  -rotate-6 md:-translate-x-1/4 lg:-translate-x-1/2 -translate-y-1/4">
             <img src={img6} className="size-full object-cover object-center" />
           </div>
-          <div className="w-48 md:w-[30rem] rotate-6  img-7 translate-x-1/4 -translate-y-3/4 flex-1">
+          <div className="w-48 md:w-[30rem] rotate-6  img-7 lg:translate-x-1/4 -translate-y-3/4 flex-1">
             <img src={img7} className="size-full object-cover object-center" />
           </div>
         </div>
 
         <div className="flex flex-col gap-24 justify-center items-center sec-4">
-          <div className="w-48 md:w-72 self-end md:self-center px-4">
+          <div className="w-48 md:w-72 self-end lg:self-center px-4">
             <img
               src={findCube}
               className="szie-full object-cover object-center"
@@ -304,7 +304,7 @@ export default function LaColiarSection() {
                 className="szie-full object-cover object-center"
               />
             </div>
-            <div className="img-8 w-32 md:w-60 -rotate-6 absolute bottom-full md:-left-20 left-8 md:bottom-1/2 md:-translate-x-0">
+            <div className="img-8 w-32 md:w-60 -rotate-6 absolute bottom-full lg:-left-20 left-20  md:bottom-1/2 ">
               <img
                 src={img8}
                 className="szie-full object-cover object-center"
