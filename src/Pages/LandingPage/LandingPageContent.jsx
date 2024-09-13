@@ -192,7 +192,7 @@ export const products = [
         circle: "bg-[#a564a8]  group-hover:w-[110%] top-1/2",
         button:
           "group-hover:bg-[#a564a8] group-hover:rounded-xl group-hover:scale-110",
-        emoji: "w-1/3 md:w-1/2",
+        emoji: "",
       },
     },
     {
