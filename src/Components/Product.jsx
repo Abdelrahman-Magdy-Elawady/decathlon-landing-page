@@ -13,7 +13,7 @@ export default function Product({ product }) {
         </div>
       )}
       <div
-        className={`isolate relative w-72 group flex justify-center items-center`}
+        className={`isolate relative sm:w-72 group flex justify-center items-center`}
       >
         <div
           className={`${product.styles.circle} absolute  left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square rounded-full  transition-all duration-300  ease-in-out w-0`}
@@ -44,25 +44,25 @@ export default function Product({ product }) {
             product.styles.cardImgPosition === "left"
               ? "bottom-0 left-1/4 group-hover:left-0 group-hover:-rotate-12 origin-bottom-left"
               : "bottom-0 right-1/4 group-hover:right-0  group-hover:rotate-12 origin-bottom-right"
-          } absolute  w-48  opacity-0 group-hover:opacity-100 transition-all duration-300  ease-in-out`}
+          } absolute  w-3/4 sm:w-48  opacity-0 group-hover:opacity-100 transition-all duration-300  ease-in-out`}
         >
           <img
             loading="lazy"
             src={product.cardImg}
-            className="object-center object-cover rounded-xl"
+            className="object-center object-cover "
           />
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-4 px-8">
-        <div className="font-extrabold text-2xl uppercase text-center flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center gap-4 sm:px-8 px-2">
+        <div className="font-extrabold text-sm sm:text-base md:text-2xl uppercase text-center flex items-center justify-center">
           <span> {product.name}</span>
           <GoDotFill className="flex-shrink-0" />
           <span>{product.cost}&#8364;</span>
         </div>
 
         <Button
-          className={`${product.styles.button} transition-all duration-300 `}
+          className={`${product.styles.button} transition-all duration-300 sm:text-xl text-sm`}
         >
           shop
         </Button>

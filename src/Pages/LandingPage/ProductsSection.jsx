@@ -5,7 +5,7 @@ function ProductsSection({ products, className }) {
     <Product product={item} key={index} />
   ));
   return (
-    <div className={`grid xl:grid-cols-4  sm:grid-cols-2 ${className}`}>
+    <div className={`grid xl:grid-cols-4  grid-cols-2 ${className}`}>
       {productsList}
     </div>
   );
