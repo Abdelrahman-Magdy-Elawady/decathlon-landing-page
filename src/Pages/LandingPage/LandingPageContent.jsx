@@ -134,7 +134,7 @@ export const products = [
         global: "",
         mainImg: "-rotate-6",
         mainImgBg: "-rotate-2 translate-y-2 -translate-x-1",
-        cardImgPosition: "left",
+        cardImgPosition: "right",
         circle: "bg-[#a564a8]  group-hover:w-5/6 top-1/2",
         button:
           "group-hover:bg-[#a564a8] group-hover:rounded-xl group-hover:scale-110",
