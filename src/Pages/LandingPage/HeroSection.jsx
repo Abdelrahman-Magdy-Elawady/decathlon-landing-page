@@ -71,7 +71,7 @@ const HeroSection = () => {
   );
   //-----------------------------------------------
   return (
-    <div className="w-full min-h-screen border-2" ref={heroRef}>
+    <div className="w-full min-h-screen " ref={heroRef}>
       <div className="flex justify-center items-center gap-2 sm:gap-12 w-3/4 sm:w-auto mx-auto pt-16 relative logo z-10">
         {Object.values(heroContent.header).map((imgSrc, index) => {
           return (
