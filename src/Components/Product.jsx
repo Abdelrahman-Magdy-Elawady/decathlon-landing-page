@@ -49,7 +49,7 @@ export default function Product({ product }) {
           <img
             loading="lazy"
             src={product.cardImg}
-            className="object-center object-cover"
+            className="object-center object-cover rounded-xl"
           />
         </div>
       </div>
