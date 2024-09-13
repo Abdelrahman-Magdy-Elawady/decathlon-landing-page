@@ -249,7 +249,7 @@ const YeyeWellesSection = () => {
           </div>
 
           <div
-            className="w-16 md:w-28 aspect-square absolute right-0 top-0  translate-x-1/2  -translate-y-1/2 flex justify-center items-center group-hover/videoBg:scale-110 transition-transform duration-300 playBtn"
+            className="w-14 md:w-28 aspect-square absolute right-0 top-0  translate-x-1/2  -translate-y-1/2 flex justify-center items-center group-hover/videoBg:scale-110 transition-transform duration-300 playBtn"
             style={{
               backgroundImage: `url(${playBg})`,
               backgroundSize: "cover",
@@ -257,7 +257,7 @@ const YeyeWellesSection = () => {
               backgroundPosition: "center center",
             }}
           >
-            <div className="w-5 md:w-auto">
+            <div className="w-4 md:w-auto">
               <img
                 loading="lazy"
                 src={play}

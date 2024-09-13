@@ -298,13 +298,13 @@ export default function LaColiarSection() {
             />
           </div>
           <div className="relative ">
-            <div className=" mx-4 md:w-[50rem]">
+            <div className=" mx-4 md:max-w-[50rem]">
               <img
                 src={img9}
                 className="szie-full object-cover object-center"
               />
             </div>
-            <div className="img-8 w-32 md:w-60 -rotate-6 absolute bottom-full lg:-left-20 left-20  md:bottom-1/2 ">
+            <div className="img-8 w-32 md:w-60 -rotate-6 absolute bottom-full lg:-left-20 left-8 sm:left-20  md:bottom-1/2 ">
               <img
                 src={img8}
                 className="szie-full object-cover object-center"
