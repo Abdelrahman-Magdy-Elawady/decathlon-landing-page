@@ -77,7 +77,7 @@ const HeroSection = () => {
           return (
             <div key={index}>
               <img
-                loading="lazy"
+                decoding="async"
                 src={imgSrc}
                 className="w-full h-full object-cover object-center "
               />
